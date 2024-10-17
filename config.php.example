@@ -1,0 +1,29 @@
+<?php
+// config.php
+
+return [
+    'source' => 'mysql', // Options: 'mysql', 'postgresql', 'mssql', 'oracle', 'soap'
+    'db' => [
+        'host' => 'localhost',
+        'name' => 'your_database_name',
+        'user' => 'your_username',
+        'pass' => 'your_password',
+    ],
+    'aes' => [
+        'password' => 'your_encryption_password', // Replace with your AES password
+    ],
+    'upload' => [
+        'method' => 'gcs', // Options: 'gcs', 's3'
+        'gcs' => [
+            'credentials_file' => 'gcs_credentials.json',
+            'bucket_name'      => 'your_gcs_bucket_name',
+        ],
+        's3' => [
+            'key'         => 'your_s3_key',
+            'secret'      => 'your_s3_secret',
+            'bucket_name' => 'your_s3_bucket_name',
+            'region'      => 'your_s3_region',
+        ],
+    ],
+    'testing' => true, // Set to true for testing mode
+];
